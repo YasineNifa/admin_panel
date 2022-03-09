@@ -12,11 +12,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/login" element={<Login/>} />
+          <Route path="/login" element={<Login/>} /> {/*login*/}
           <Route path="users">
             <Route index element={<List/>} />
-            <Route path="new" element={<New/>} />
-            <Route path=":userId" element={<Single/>} />
+            <Route path="new" element={<New/>} /> {/*users/new*/}
+            <Route path=":userId" element={<Single/>} /> {/*users/12DZD*/}
+          </Route>
+          <Route path="products">
+            <Route index element={<List/>} />{/*products*/}
+            <Route path="new" element={<New/>} />{/*products/new*/} {/*there is no / before new*/}
+            <Route path=":productId" element={<Single/>}/>{/*products/12DZD*/}
           </Route>
         </Routes>
       </BrowserRouter>
