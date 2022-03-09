@@ -12,10 +12,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/list" element={<List/>} />
           <Route path="/login" element={<Login/>} />
-          <Route path="/new" element={<New/>} />
-          <Route path="/single" element={<Single/>} />
+          <Route path="users">
+            <Route index element={<List/>} />
+            <Route path="new" element={<New/>} />
+            <Route path=":userId" element={<Single/>} />
+          </Route>
         </Routes>
       </BrowserRouter>
 
