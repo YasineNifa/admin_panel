@@ -12,6 +12,7 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div className='sidebar'>
@@ -22,19 +23,25 @@ function Sidebar() {
         <div className='center'>
             <ul>
                 <p className="title">MAIN</p>
+                <Link to="/" style={{ textDecoration: "none" }}>
                 <li>
                     <DashboardIcon className="icon"/>
                     <span>Dashboard</span>
                 </li>
+                </Link>
                 <p className="title">LISTS</p>
+                <Link to="/users" style={{ textDecoration: "none" }}>
                 <li>
                     <PersonOutlinedIcon className="icon"/>
                     <span>Users</span>
-                </li> 
+                </li>
+                </Link>
+                <Link to="/products" style={{ textDecoration: "none" }}> 
                 <li>
                     <AddBusinessIcon className="icon"/>
                     <span>Products</span>
-                </li> 
+                </li>
+                </Link>
                 <li>
                     <CreditCardIcon className="icon"/>
                     <span>Orders</span>
