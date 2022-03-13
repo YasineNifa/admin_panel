@@ -44,6 +44,27 @@
                 .icon{
                     font-size: 20px;
                 }
+
+                .counter{
+                    /*style the counter*/
+                    width: 15px;
+                    height: 15px;
+                    font-size: 10px;
+                    font-weight: bold;
+                    color: white;
+                    /*Stule the contaner of the number*/
+                    background-color: red;
+                    border-radius: 50%;
+
+                    /*positionner le 1 dans les notification*/
+                    position: absolute;
+                    right: -5px;
+                    top: -5px;
+                    /*Positionner le 1 excatement au milieu*/
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
         }
     }
